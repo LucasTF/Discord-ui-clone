@@ -6,7 +6,7 @@ import StyledServerName from './styles';
 const ServerName: React.FC = () => {
 	return (
 		<StyledServerName>
-			<p className='title'>Arena dos Refugiados</p>
+			<h1 className='title'>Arena dos Refugiados</h1>
 			<MdKeyboardArrowDown />
 		</StyledServerName>
 	);

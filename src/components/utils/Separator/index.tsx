@@ -1,9 +1,13 @@
 import React from 'react';
 
-import StyledSeparator from './styles';
+import { VerticalSeparator, HorizontalSeparator } from './styles';
 
-const Separator: React.FC = () => {
-	return <StyledSeparator />;
+interface ISeparatorProps {
+	vertical?: boolean;
+}
+
+const Separator: React.FC<ISeparatorProps> = ({ vertical }) => {
+	return vertical ? <VerticalSeparator /> : <HorizontalSeparator />;
 };
 
 export default Separator;

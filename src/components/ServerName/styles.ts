@@ -3,6 +3,8 @@ import styled from 'styled-components';
 const StyledServerName = styled.div`
 	grid-area: sv-name;
 
+	height: 48px;
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -28,6 +30,10 @@ const StyledServerName = styled.div`
 		width: 20px;
 
 		color: var(--gray);
+	}
+
+	&:hover {
+		background-color: var(--quinary);
 	}
 `;
 
