@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
-const StyledChannelButton = styled.div`
+interface IStyledChannelButtonProps {
+	isAudio?: boolean;
+}
+
+const StyledChannelButton = styled.div<IStyledChannelButtonProps>`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 
+	margin: 2px 0;
 	padding: 5px 3px;
 	border-radius: 5px;
 
@@ -30,12 +35,14 @@ const StyledChannelButton = styled.div`
 		span {
 			font-size: 15px;
 			color: var(--senary);
+			text-transform: ${props => (props.isAudio ? 'none' : 'lowercase')};
 
 			margin-left: 5px;
 		}
 	}
 
 	.options {
+		display: none;
 		svg {
 			height: 14px;
 			width: 14px;
@@ -53,11 +60,21 @@ const StyledChannelButton = styled.div`
 	}
 
 	&:hover,
-	&:active {
+	&:active,
+	&.active {
 		background-color: var(--quinary);
 
 		.channel span {
 			color: var(--white);
+
+			overflow: hidden;
+			max-width: 136px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		.options {
+			display: flex;
 		}
 	}
 `;

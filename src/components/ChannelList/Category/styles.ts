@@ -7,20 +7,36 @@ const StyledCategory = styled.div`
 		align-items: center;
 		justify-content: space-between;
 
-		margin-bottom: 6px;
+		margin: 12px 0 6px 0;
 
-		span {
-			font-size: 12px;
-			font-weight: 500;
+		position: relative;
+		cursor: pointer;
+
+		svg.dropdown {
+			position: absolute;
+			left: -15px;
+
 			color: var(--gray);
 		}
 
-		svg {
+		span {
+			font-size: 12px;
+			font-weight: bold;
+			color: var(--gray);
+		}
+
+		svg.add {
 			height: 21px;
 			width: 21px;
 
 			color: var(--gray);
-			cursor: pointer;
+		}
+
+		&:hover {
+			span,
+			svg.dropdown {
+				color: var(--white);
+			}
 		}
 	}
 `;

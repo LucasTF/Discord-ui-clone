@@ -9,7 +9,12 @@ const Topbar: React.FC = () => {
 	return (
 		<StyledTopbar>
 			<FaHashtag />
-			<h2>arena</h2>
+			<h2>
+				<span role='img' aria-label='chat'>
+					💬
+				</span>
+				arena
+			</h2>
 			<Separator vertical />
 			<span>Descrição</span>
 		</StyledTopbar>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdAdd } from 'react-icons/md';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 import StyledCategory from './styles';
 
@@ -11,8 +12,9 @@ const Category: React.FC<ICategoryProps> = ({ title, children }) => {
 	return (
 		<StyledCategory>
 			<div className='title'>
+				<RiArrowDropDownLine className='dropdown' />
 				<span>{title.toUpperCase()}</span>
-				<MdAdd />
+				<MdAdd className='add' />
 			</div>
 			{children}
 		</StyledCategory>

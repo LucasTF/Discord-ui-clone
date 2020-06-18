@@ -6,8 +6,16 @@ const StyledChannelList = styled.section`
 	display: flex;
 	flex-direction: column;
 
-	padding: 24px 9.5px 0 16px;
+	padding: 8px 9.5px 0 16px;
 	background-color: var(--secondary);
+
+	overflow: scroll;
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	scrollbar-width: none;
 `;
 
 export default StyledChannelList;

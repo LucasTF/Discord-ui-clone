@@ -17,10 +17,13 @@ const ChannelButton: React.FC<IChannelButtonProps> = ({
 	isAudio,
 }) => {
 	return (
-		<StyledChannelButton className={selected ? 'active' : ''}>
+		<StyledChannelButton
+			className={selected ? 'active' : ''}
+			isAudio={isAudio}
+		>
 			<div className='channel'>
 				{isAudio ? <IoMdVolumeHigh /> : <FaHashtag />}
-				<span>{title.toLowerCase()}</span>
+				<span>{title}</span>
 			</div>
 			<div className='options'>
 				<BsPersonPlusFill />
