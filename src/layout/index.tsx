@@ -6,6 +6,7 @@ import Sidebar from '../components/Sidebar';
 import ServerName from '../components/ServerName';
 import Topbar from '../components/Topbar';
 import ChannelList from '../components/ChannelList';
+import UserBox from '../components/UserBox';
 
 const Layout: React.FC = () => {
 	return (
@@ -14,6 +15,7 @@ const Layout: React.FC = () => {
 			<ServerName />
 			<Topbar />
 			<ChannelList />
+			<UserBox />
 		</StyledLayout>
 	);
 };

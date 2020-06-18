@@ -7,7 +7,7 @@ const StyledLayout = styled.div`
 	grid-template-areas:
 		'sidebar sv-name topbar topbar'
 		'sidebar sv-channels sv-chat sv-users'
-		'sidebar user-config sv-chat sv-users';
+		'sidebar user-box sv-chat sv-users';
 
 	height: 100vh;
 `;
