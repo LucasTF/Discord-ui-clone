@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
-import avatar from '../../../assets/avatar.jpg';
+interface IStyledAvatarProps {
+	image?: string;
+	size?: number;
+}
 
-const StyledAvatar = styled.div`
-	height: 34px;
-	width: 34px;
+const StyledAvatar = styled.div<IStyledAvatarProps>`
+	height: ${props => (props.size ? props.size + 'px' : '34px')};
+	width: ${props => (props.size ? props.size + 'px' : '34px')};
 	border-radius: 50%;
 
 	background-color: var(--gray);
-	background-image: url(${avatar});
+	background-image: url(${props => (props.image ? props.image : '')});
 	background-size: 100%;
 	background-repeat: no-repeat;
 `;

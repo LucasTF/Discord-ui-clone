@@ -8,6 +8,8 @@ import Topbar from '../components/Topbar';
 import ChannelList from '../components/ChannelList';
 import UserBox from '../components/UserBox';
 
+import UserList from '../components/UserList';
+
 const Layout: React.FC = () => {
 	return (
 		<StyledLayout>
@@ -16,6 +18,7 @@ const Layout: React.FC = () => {
 			<Topbar />
 			<ChannelList />
 			<UserBox />
+			<UserList />
 		</StyledLayout>
 	);
 };

@@ -1,9 +1,16 @@
 import React from 'react';
 
+import Status from '../../../utils/enums/Status';
 import StyledAvatar from './styles';
 
-const Avatar: React.FC = () => {
-	return <StyledAvatar />;
+interface IAvatarProps {
+	status: Status;
+	image?: string;
+	size?: number;
+}
+
+const Avatar: React.FC<IAvatarProps> = ({ status, image, size }) => {
+	return <StyledAvatar image={image} size={size} />;
 };
 
 export default Avatar;
